@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدفع</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/chechout.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <main>
+        <div class="container">
+            <div class="left">
+                <img src="https://i.pinimg.com/736x/64/42/bc/6442bc4c5cb36ec1c9cbc96e8819e1da.jpg" alt="supplies photo" style="max-width: 300%; height: 200%;">
+            </div>
+            <div class="right">
+                <h2>الدفع<br><small>معلومات الدفع</small></h2>
+    
+                <label for="name">اسم حامل البطاقة</label>
+                <input type="text" id="name" placeholder="الاسم" />
+    
+                <label for="number">رقم البطاقة</label>
+                <input type="text" id="number" placeholder="1234 5678 9012 3456" />
+    
+                <label for="type">نوع البطاقة</label>
+                <select id="type">
+                    <option value="">اختر نوع البطاقة</option>
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">MasterCard</option>
+                    <option value="amex">American Express</option>
+                </select>
+    
+                <div class="row">
+                    <div>
+                        <label for="expiry">تاريخ الانتهاء</label>
+                        <input type="text" id="expiry" placeholder="dd/mm/yyyy" />
+                    </div>
+                    <div>
+                        <label for="cvv">رمز التحقق</label>
+                        <input type="text" id="cvv" placeholder="123" />
+                    </div>
+                </div>
+    
+                <a href="/HTML/homePage.html"><button>ادفع</button></a>
+            </div>
+        </div>
+    </main>
+    <div id="footer"></div>
+    <script>
+    // تحميل النافبار
+    fetch("../navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+
+    // تحميل الفوتر
+    fetch("../footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
